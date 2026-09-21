@@ -14,7 +14,7 @@ print("Task 1: Arithmetic expressions")
 print("Expected output: 7")
 
 # Task 1 : Add parentheses to the Python statement below so that it prints
-out the number 7.
+# out the number 7.
 
 print(10 + 4 / 2)
 
