@@ -148,7 +148,9 @@ print("Expected output: 100")
 # Task 11: Modify the statement below so that it displays the number 100.
 # Do this using the int() function (hint: you need to use it twice).
 
-print("19" + "81")
+int("19") + int("81")
+print(int("19") + int("81"))
+
 #------------------------------------------------------------------------
 
 print("\n------")
