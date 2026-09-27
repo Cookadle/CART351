@@ -148,7 +148,8 @@ print("Expected output: 100")
 # Task 11: Modify the statement below so that it displays the number 100.
 # Do this using the int() function (hint: you need to use it twice).
 
-int("19") + int("81")
+#int("19") + int("81")
+
 print(int("19") + int("81"))
 
 #------------------------------------------------------------------------
@@ -163,6 +164,8 @@ print("Expected output: test_var is less than 200")
 test_var = 90
 if test_var > 200:	
 	print("test_var is greater than 200!")
+else:
+    print("test_var is less than 200!")
 #------------------------------------------------------------------------
 
 print("\n------")
@@ -173,7 +176,7 @@ print("Expected output: the condition test passed")
 # 'the condition test passed'. Do not change the values of the varaibles.
 test_var_three = 400
 test_var_two = 800
-if test_var_three > 200 and test_var_two < 400:	
+if test_var_three > 200 and test_var_two > 400:	
 	print("the condition test passed")
 else:
 	print("the condition test not passed")
