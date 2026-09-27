@@ -13,10 +13,10 @@ print("------")
 print("Task 1: Arithmetic expressions")
 print("Expected output: 7")
 
-# Task 1 : Add parentheses to the Python statement below so that it prints
+# Task 1: Add parentheses to the Python statement below so that it prints
 # out the number 7.
 
-print(10 + 4 / 2)
+print((10 + 4 )/ 2)
 
 #------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ print("Expected output: True")
 # Task 2: Change the operator in the statement below so that it displays
 # "True" instead of "False."
 
-print(14 > 15)
+print(14 <15)
 
 #------------------------------------------------------------------------
 
@@ -38,23 +38,23 @@ print("Expected output: 54")
 # Task 3: Change the variable assignment below so that the print statement
 # displays "54." (Don't change the print statement!)
 
-a_num_variable = 17
+a_num_variable = 54
 print(a_num_variable)
 
 #------------------------------------------------------------------------
 
 print("\n------")
 print("Task 4: Types")
-print("Expected output: ")
+print("Expected output: <class 'str'>")
 
 # Task 4: Three variables are assigned below, all with different types.
 # Replace the word "None" inside the parentheses of type() in the print
-# statement below so that it prints "".
+# statement below so that it prints "<class 'str'>".
 
 x = 14
 y = 17.4
 z = "today is a fine day for sailing!"
-print(type(None))
+print(type(z))
 
 #------------------------------------------------------------------------
 
@@ -69,7 +69,8 @@ print("Expected output: 51")
 
 first_line = "It was the best of times."
 second_line = "It was the worst of times."
-print() # your code here!
+
+print(len(first_line) + len(second_line))
 
 #------------------------------------------------------------------------
 
@@ -82,7 +83,8 @@ print("Expected output: 25")
 # called "aStringSentence." Use the .find() method.
 
 aStringSentence = "Did the cat jump out the window yesterday?"
-print() # your code here!
+print(aStringSentence.find("window")) # your code here!
+
 
 #------------------------------------------------------------------------
 
@@ -95,7 +97,7 @@ print("Expected output: someone who has spent too much time")
 # the beginning and end of the string. Use the .strip() method.
 
 partLy = "     someone who has spent too much time    \n"
-print(partLy)
+print(partLy.strip())
 
 #------------------------------------------------------------------------
 
@@ -108,7 +110,8 @@ print("Expected output: SOMEONE WHO HAS SPENT TOO MUCH TIME")
 # the string, with all whitespace removed, and with all letters converted to
 # uppercase. Use the .upper() method.
 
-print() # your code here!
+partLy = "     someone who has spent too much time    \n"
+print(partLy.strip().upper()) # your code here!
 
 #------------------------------------------------------------------------
 
@@ -119,7 +122,7 @@ print("Expected output: p")
 # Task 9: Modify the value assigned to variable "offset" below so that
 # the following "print" statement displays the letter "p".
 
-offset = 0
+offset = 2
 print("apple"[offset])
 
 #------------------------------------------------------------------------
@@ -131,8 +134,8 @@ print("Expected output: jump")
 # Task 10: Modify the values assigned to variables "start" and "end"
 # below so that the following "print" statement displays the word "jump".
 
-start = 0
-end = 10
+start = 12
+end = 17
 aStringSentenceAgain = "Did the cat jump out the window yesterday?"
 print(aStringSentenceAgain[start:end])
 
@@ -173,162 +176,3 @@ if test_var_three > 200 and test_var_two < 400:
 else:
 	print("the condition test not passed")
 #------------------------------------------------------------------------
-
-print("\n------")
-print("Task 14: List indexes")
-print("Expected output: alpha")
-
-# Task 14: A variable "greek" is defined below. The value of this variable
-# is of type list. Change the expression below the variable definition so
-# that it prints "alpha" (instead of "beta").
-
-greek = ["alpha", "beta", "gamma", "delta", "epsilon"]
-print(greek[1])
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 15: List slices")
-print("Expected output: ['beta', 'gamma', 'delta']")
-
-# Task 15: Change the values of the variables "start" and "finish" below so that
-# the print statement displays the second through fourth items in the list
-# "greek" (defined above).
-
-start = 0
-finish = 6
-print(greek[start:finish])
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 16: List slices, part 2")
-print("Expected output: ['delta', 'epsilon']")
-
-# Task 16: Change the value of the variable "foo" below so that the print
-# statement displays the last two members of the list "greek" (defined above).
-# Use a negative number for "foo".
-
-foo = 0
-print(greek[foo:])
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 17: List operations")
-print("Expected output: True")
-
-# Task 17: Change the value of the variable "letter_to_look_for' below so
-# that the print statement displays "True."
-
-vegetables= ["aubergines", "carrots", "turnips", "fiddleheads", "artichokes"]
-word_to_look_for = "carret"
-print(word_to_look_for in vegetables)
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 18: List operations, part 2")
-print("Expected output: ['artichokes', 'aubergines', 'carrots', 'fiddleheads', 'turnips']")
-
-# Task 18: Change the expression below so that the print statement displays
-# the list "vegetables" (defined above) in alphabetical order. (Use the "sort"
-# function.
-
-print(vegetables)
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 19: Modifying lists")
-print("Expected output: ['artichokes', 'aubergines', 'carrots', 'fiddleheads', 'turnips','radishes']")
-
-# Task 19: Write a Python statement that adds a new item, "radishes", to the
-# list "vegetables" (defined above). The print statement should display the updated
-# list.
-
-# write your statement here
-print(vegetables)
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 20: Loops")
-print("Expected output:")
-print("  artichokes")
-print("  aubergines")
-print("  carrots")
-print("  fiddleheads")
-print("  turnips")
-print("  radishes")
-
-# Task 20: Write a "for" loop below that prints out each item in the list
-# "vegetables" (defined above). (The list should contain the item that you
-# added to the list in task 17.)
-
-
-
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 21: Loops, part 2")
-print("Expected output:")
-print("  Artichokes")
-print("  Aubergines")
-print("  Carrots")
-print("  Fiddleheads")
-print("  Turnips")
-print("  Radishes")
-
-
-# Task 21: Write a "for" loop below that prints out each item in the list
-# "vegetables" (defined above), but with the first letter of each item capitalized.
-# (The list should contain the item that you added to the list in task 17.)
-
-
-
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 22: Split and join")
-print("Expected output:")
-print("  25")
-print("  9-18-25")
-
-# Task 22: Modify the variable "separator" below so that the first print
-# statement displays "25". Modify the variable "glue" so that the second print
-# statement displays "9-18-25".
-
-
-separator = "?"
-glue = "?"
-parts = "9/18/25".split(separator)
-print(parts[-1])
-print(glue.join(parts))
-
-#------------------------------------------------------------------------
-
-print("\n------")
-print("Task 23: All together now")
-print("Expected output: alpha, beta, gamma, delta, epsilon, zeta, eta, theta")
-
-# Task 23: Make three changes on the Python code below, as follows: (1) replace
-# [] with an expression that evaluates to a list with two items, "eta" and
-# "theta" (using the .split() method). (2) Replace the word "pass" with a
-# Python statement, so that the "for" loop has the effect of adding two new
-# items to the list "greek" - recall it was defined above - but we redefine it below:). 
-# (Use the .append() method.) (3) Change the value
-# of the variable "glue" so that the desired output is displayed.
-
-greek = ["alpha", "beta", "gamma", "delta", "epsilon","zeta"]
-new_letters = "eta theta"
-new_letters_list = [] # <-- replace this
-
-for letter_name in new_letters_list:
-	pass # <-- and replace this
-
-glue = "?" # <-- and replace this
-
-print(glue.join(greek))
