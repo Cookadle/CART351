@@ -72,6 +72,7 @@ print("Expected output: ['artichokes', 'aubergines', 'carrots', 'fiddleheads', '
 # the list "vegetables" (defined above) in alphabetical order. (Use the "sort"
 # function.
 vegetables= ["aubergines", "carrots", "turnips", "fiddleheads", "artichokes"]
+vegetables.sort()
 print(vegetables)
 
 #------------------------------------------------------------------------
@@ -85,6 +86,7 @@ print("Expected output: ['artichokes', 'aubergines', 'carrots', 'fiddleheads', '
 # list.
 
 # write your statement here
+vegetables.append("radishes")
 print(vegetables)
 
 #------------------------------------------------------------------------
@@ -103,7 +105,9 @@ print("  radishes")
 # "vegetables" (defined above). (The list should contain the item that you
 # added to the list in task 17.)
 
-
+vegetables.append("radishes")
+for vegetable in vegetables:
+    print(vegetable)
 
 
 #------------------------------------------------------------------------
@@ -123,6 +127,9 @@ print("  Radishes")
 # "vegetables" (defined above), but with the first letter of each item capitalized.
 # (The list should contain the item that you added to the list in task 17.)
 
+vegetables.append("radishes")
+for vegetable in vegetables:
+    print(vegetable.capitalize())
 
 
 
@@ -138,9 +145,8 @@ print("  9-18-25")
 # statement displays "25". Modify the variable "glue" so that the second print
 # statement displays "9-18-25".
 
-
-separator = "?"
-glue = "?"
+separator = "/"
+glue = "-"
 parts = "9/18/25".split(separator)
 print(parts[-1])
 print(glue.join(parts))
@@ -161,12 +167,12 @@ print("Expected output: alpha, beta, gamma, delta, epsilon, zeta, eta, theta")
 
 greek = ["alpha", "beta", "gamma", "delta", "epsilon","zeta"]
 new_letters = "eta theta"
-new_letters_list = [] # <-- replace this
+new_letters_list =  new_letters.split(" ") # <-- replace this
 
 for letter_name in new_letters_list:
-	pass # <-- and replace this
+	greek.append(letter_name)# <-- and replace this
 
-glue = "?" # <-- and replace this
+glue = ", " # <-- and replace this
 
 print(glue.join(greek))
 
