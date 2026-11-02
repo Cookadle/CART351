@@ -20,7 +20,7 @@ print("Expected output: alpha")
 # that it prints "alpha" (instead of "beta").
 
 greek = ["alpha", "beta", "gamma", "delta", "epsilon"]
-print(greek[1])
+print(greek[0])
 
 #------------------------------------------------------------------------
 
@@ -32,8 +32,8 @@ print("Expected output: ['beta', 'gamma', 'delta']")
 # the print statement displays the second through fourth items in the list
 # "greek" (defined above).
 
-start = 0
-finish = 6
+start = 1
+finish = 4
 print(greek[start:finish])
 
 #------------------------------------------------------------------------
@@ -46,7 +46,7 @@ print("Expected output: ['delta', 'epsilon']")
 # statement displays the last two members of the list "greek" (defined above).
 # Use a negative number for "foo".
 
-foo = 0
+foo = -2
 print(greek[foo:])
 
 #------------------------------------------------------------------------
@@ -59,7 +59,7 @@ print("Expected output: True")
 # that the print statement displays "True."
 
 vegetables= ["aubergines", "carrots", "turnips", "fiddleheads", "artichokes"]
-word_to_look_for = "carret"
+word_to_look_for = "carrots"
 print(word_to_look_for in vegetables)
 
 #------------------------------------------------------------------------
@@ -71,7 +71,8 @@ print("Expected output: ['artichokes', 'aubergines', 'carrots', 'fiddleheads', '
 # Task 18: Change the expression below so that the print statement displays
 # the list "vegetables" (defined above) in alphabetical order. (Use the "sort"
 # function.
-
+vegetables= ["aubergines", "carrots", "turnips", "fiddleheads", "artichokes"]
+vegetables.sort()
 print(vegetables)
 
 #------------------------------------------------------------------------
@@ -85,6 +86,7 @@ print("Expected output: ['artichokes', 'aubergines', 'carrots', 'fiddleheads', '
 # list.
 
 # write your statement here
+vegetables.append("radishes")
 print(vegetables)
 
 #------------------------------------------------------------------------
@@ -103,7 +105,9 @@ print("  radishes")
 # "vegetables" (defined above). (The list should contain the item that you
 # added to the list in task 17.)
 
-
+vegetables.append("radishes")
+for vegetable in vegetables:
+    print(vegetable)
 
 
 #------------------------------------------------------------------------
@@ -123,6 +127,9 @@ print("  Radishes")
 # "vegetables" (defined above), but with the first letter of each item capitalized.
 # (The list should contain the item that you added to the list in task 17.)
 
+vegetables.append("radishes")
+for vegetable in vegetables:
+    print(vegetable.capitalize())
 
 
 
@@ -138,9 +145,8 @@ print("  9-18-25")
 # statement displays "25". Modify the variable "glue" so that the second print
 # statement displays "9-18-25".
 
-
-separator = "?"
-glue = "?"
+separator = "/"
+glue = "-"
 parts = "9/18/25".split(separator)
 print(parts[-1])
 print(glue.join(parts))
@@ -161,12 +167,12 @@ print("Expected output: alpha, beta, gamma, delta, epsilon, zeta, eta, theta")
 
 greek = ["alpha", "beta", "gamma", "delta", "epsilon","zeta"]
 new_letters = "eta theta"
-new_letters_list = [] # <-- replace this
+new_letters_list =  new_letters.split(" ") # <-- replace this
 
 for letter_name in new_letters_list:
-	pass # <-- and replace this
+	greek.append(letter_name)# <-- and replace this
 
-glue = "?" # <-- and replace this
+glue = ", " # <-- and replace this
 
 print(glue.join(greek))
 
