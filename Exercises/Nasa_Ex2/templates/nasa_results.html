@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="results-container" style="padding: 20px; background: white; border-radius: 8px;">
+    <h3>NASA Search Results for: <span style="background: rgb(255, 0, 93); color: white; padding: 2px 6px;">{{ search_term }}</span></h3>
+    
+    {% if items %}
+        <p style="margin: 15px 0;">Found {{ items|length }} results:</p>
+        
+        {% for item in items %}
+            <div class="nasa-item" style="margin-bottom: 30px; border-bottom: 2px solid #ccc; padding-bottom: 15px;">
+                <h4 style="color: rgb(217, 55, 220);">{{ item.data[0].title }}</h4>
+                <p><strong>Date Created:</strong> {{ item.data[0].date_created }}</p>
+                <p style="margin: 10px 0;">{{ item.data[0].get('description', 'No description available.')[:250] }}...</p>
+                {% if item.links %}
+                    <img src="{{ item.links[0].href }}" alt="{{ item.data[0].title }}" style="max-width: 400px; display: block; margin-top: 10px;">
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+    {% else %}
+        <p> No results !!!!!!NOTHING !!!I SAY NOTHING was found for "{{ search_term }}". Try something else ;p .</p>
+    {% endif %}
+    
+    <br>
+    <a href="{{ url_for('search_page') }}">&larr; Back to Search</a>
+</div>
+{% endblock %}

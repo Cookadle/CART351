@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container" style="padding: 20px; background: white; border-radius: 8px;">
+    <h3>Search NASA database or sumsum </h3>
+    <form action="{{ url_for('nasa_search_results') }}" method="GET">
+        <p>
+            <label style="display:inline-block; width:25%; text-transform:uppercase;" > Search for : </label>
+            <input type="text" name="query" placeholder="e.g., apollo, nebula, mars,artemis,supernova,black hole,galaxy,saturn,jupiter,earth" required style="width:50%; padding:8px;">
+        </p>
+        <p>
+            <input type="submit" value="Search NASA" style="background-color: rgb(217, 55, 220); color: white; border: none; padding: 10px 20px; cursor: pointer;">
+        </p>
+    </form>
+</div>
+{% endblock %}
