@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Search NASA Images (Multiple Results)</h1>
+  
+    <form action="{{ url_for('getSearchCriteria_adv') }}" method="GET">
+        <input type="text" name="search" placeholder="e.g.  mars,apollo,balls,flat earth..." required>
+        <input type="submit" value="Search ">
+    </form>
+
+    <!-- container grid 4 images -->
+    <div class="image-grid" style="margin-top: 25px; display: flex; flex-wrap: wrap; gap: 15px;">
+        
+        
+        {% for img_url in images %}
+            <div style="width: 23%; min-width: 150px;">
+                <img src="{{ img_url }}" alt="NASA Dynamic Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

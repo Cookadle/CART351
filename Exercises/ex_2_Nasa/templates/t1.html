@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Search NASA Images</h1>
+
+<form action="{{ url_for('getSearchCriteria') }}" method="GET">
+    <input type="text" name="search" placeholder="e.g. mars,apollo,balls,flat earth...">
+    <input type="submit" value="Search">
+</form>
+
+{% if have_results %}
+        <div class="result-container" style="margin-top: 20px; border-top: 1px solid #ccc; padding-top: 20px;">
+            <h3>Description:</h3>
+            <p>{{ description }}</p>
+            
+            <h3>Image Result:</h3>
+            <img src="{{ imgPath }}" alt="NASA Result" style="max-width: 100%; height: auto; margin-top: 10px; border-radius: 4px;">
+        </div>
+{% endif %}
+{% endblock %}
