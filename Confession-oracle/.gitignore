@@ -1,0 +1,7 @@
+#virtaul env wont be on github lmao
+venv/
+oracle/
+#pyhton cache data (keep clean)
+__pycache__/
+#os metadata (think of macosx bs you always see when you download sabine files )
+.DS_Store
