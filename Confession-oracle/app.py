@@ -42,11 +42,48 @@ def save_confessions(confessions):
         #indent=format //accented letter readable
         json.dump(confessions, f, indent=2, ensure_ascii=False)
 
+@app.route("/confess", methods=["POST"])
+def confess():
+    """Receive a confession from the browser, validate and save"""
 
+    data = request.get_json()
+
+
+    if not data or "text" not in data:
+        return jsonify({"error": "No text received"}), 400
+
+    text = data["text"].strip()
+    if text == "":
+        return jsonify({"error": "Confession is empty"}), 400
+
+    if len(text) > MAX_LENGTH:
+        return jsonify({"error": "Confession is too long"}), 400
+
+
+    confessions = load_confessions()
+
+    new_confession = {
+        "id": len(confessions) + 1,
+        "text": text,
+        "timestamp": datetime.now().isoformat(), #date/time confess was submitted
+        "times_given": 0, #counter 4 future oracle response
+        "ratings": [], #list user accuracy ratings like 87% ou our ratings are real
+    }
+
+    confessions.append(new_confession)
+    save_confessions(confessions)
+
+    return jsonify({"status": "saved", "id": new_confession["id"]}), 201
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
