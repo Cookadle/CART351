@@ -2,7 +2,7 @@ const oracleButton = document.getElementById("oracle-button");
 const oracleOutput = document.getElementById("oracle-output");
 
 oracleButton.addEventListener("click", async () => {
-  oracleOutput.textContent = "Listening to the oracle...";
+  oracleOutput.textContent = "Listening to thy oracle...";
 
   try {
     const response = await fetch("/oracle");
@@ -14,9 +14,9 @@ oracleButton.addEventListener("click", async () => {
         <small>Echoed ${data.times_given} time(s)</small>
       `;
     } else {
-      oracleOutput.textContent = data.error || "Could not reach the oracle.";
+      oracleOutput.textContent = data.error || "Could not reach thy oracle.";
     }
   } catch (err) {
-    oracleOutput.textContent = "Network error—check that Flask is running.";
+    oracleOutput.textContent = "Network error!Check that Flask is running.";
   }
 });
