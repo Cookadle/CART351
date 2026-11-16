@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-    <title>The Confession Oracle</title>
-  </head>
-  <body>
-    <header></header>
 
-    <main class="container">
-      <h1>Tell me something you never said.</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <title>The Confession Oracle</title>
+</head>
 
-      <form id="confession-form">
-        <label for="confession-input">Your confession</label>
-        <textarea
-          id="confession-input"
-          name="text"
-          rows="4"
-          maxlength="500"
-          placeholder="Type what you haven't said out loud..."
-          required
-        ></textarea>
+<body>
+  <header></header>
 
-        <button type="submit">Confess</button>
-      
+  <main class="container">
+    <h1>Confess to us something you never said, oh you fortunate one.</h1>
+
+    <form id="confession-form">
+      <label for="confession-input">Your confession dear... </label>
+      <textarea id="confession-input" name="text" rows="4" maxlength="500"
+        placeholder="Tell me a secret,a sin ,a regret...." required></textarea>
+
+      <button type="submit"> Confess! </button>
 
       <p id="status-message" aria-live="polite"></p>
-    </main>
 
-    <footer>
-      <p class="disclaimer">
-        Oracle is not responsible for any harm or injuries caused. Always
-        consult a certified human before making any drastic changes to
-        yourself.
-      </p>
-      </form>
-    </footer>
+      <section id="oracle-section">
+        <button type="button" id="oracle-button"> Seek fortune from the all-knowing seer ,the Oracle.</button>
+        <div id="oracle-output" aria-live="polite"></div>
 
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  </body>
+      </section>
+  </main>
+
+  <footer>
+    <p class="disclaimer">
+      Visions and omens are not assured and may shift from soul to soul. Thou alone are the master of thy own path,
+      deeds, and choices. No oaths are sworn regarding the truth or days yet to come of any fortune.
+    </p>
+    </form>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
 </html>
