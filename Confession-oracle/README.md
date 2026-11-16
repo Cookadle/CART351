@@ -12,6 +12,7 @@ Inspired by the rumour where Skyla shared a story on how chatgpt was reading tea
 Also inspired by my previous project to do list where the data of the user and the experience is didacted by the user info rather than the web.
 
 Any AI usage will be cited and added  here and their purpose.Others sources as well.
+Docstrings - https://www.geeksforgeeks.org/python/python-docstrings/
 Tarot game on steam - https://store.steampowered.com/app/3582900/Mama_Nyahs_House_of_Tarot/
 Tarot card game code - https://github.com/DevinReid/Tarot_Generate_Arcade (deck.py,draw.py,fetch.py,game.py)
 Confession Wall - https://github.com/IdanHajbeko/Confession-Wall
@@ -28,3 +29,5 @@ https://github.com/phildp/word-cloud
 
 movement and distortion effects for p5.js
 https://b2renger.github.io/p5js_typo/
+
+cd Confession-oracle - python app.py    

@@ -8,6 +8,8 @@ import json
 
 import os 
 
+import random
+
 #record when confession made
 from datetime import datetime
 
@@ -22,11 +24,11 @@ DATA_FILE = os.path.join(BASE_DIR, "data", "confessions.json")
 #limit so nobody send giant essay 
 MAX_LENGTH = 500
 
-#helper func
-#try to docstring each function yea
+#helper func /// docstring each function yea
 
 #https://python.plainenglish.io/how-to-read-json-file-in-python-with-examples-in-2026-9877d0cdca71
 #w=write r=read f=file
+
 def load_confessions():
     """Read confessions.json and return python list of confessions"""
     try:
@@ -41,6 +43,9 @@ def save_confessions(confessions):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         #indent=format //accented letter readable
         json.dump(confessions, f, indent=2, ensure_ascii=False)
+
+
+
 
 @app.route("/confess", methods=["POST"])
 def confess():
@@ -74,6 +79,26 @@ def confess():
     save_confessions(confessions)
 
     return jsonify({"status": "saved", "id": new_confession["id"]}), 201
+
+@app.route("/oracle", methods=["GET"])
+def oracle():
+    """Return a confession from saved data and increment amount of times it was given back."""
+
+    confessions = load_confessions()
+
+    if not confessions:                                               
+        return jsonify({"error": "No confessions yet"}), 404
+    
+    chosen = random.choice(confessions)
+    chosen["times_given"] = chosen.get("times_given", 0) + 1
+
+    save_confessions(confessions)
+
+    return jsonify(chosen), 200
+
+
+
+
 
 @app.route("/")
 def index():
