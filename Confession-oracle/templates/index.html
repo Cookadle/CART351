@@ -24,14 +24,14 @@
         placeholder="Tell me a secret,a sin ,a regret...." required></textarea>
 
       <button type="submit"> Confess! </button>
+    </form>
+    <p id="status-message" aria-live="polite"></p>
 
-      <p id="status-message" aria-live="polite"></p>
+    <section id="oracle-section">
+      <button type="button" id="oracle-button"> Seek fortune from the all-knowing seer ,the Oracle.</button>
+      <div id="oracle-output" aria-live="polite"></div>
 
-      <section id="oracle-section">
-        <button type="button" id="oracle-button"> Seek fortune from the all-knowing seer ,the Oracle.</button>
-        <div id="oracle-output" aria-live="polite"></div>
-
-      </section>
+    </section>
   </main>
 
   <footer>
@@ -39,7 +39,6 @@
       Visions and omens are not assured and may shift from soul to soul. Thou alone are the master of thy own path,
       deeds, and choices. No oaths are sworn regarding the truth or days yet to come of any fortune.
     </p>
-    </form>
   </footer>
 
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
