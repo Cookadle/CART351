@@ -34,7 +34,7 @@ if (confessionForm && confessionInput) { //CHECK form and date entered
                     statusMessage.textContent = "Confession whispered to thy oracle.";
                 }
             } else if (statusMessage) {
-                statusMessage.textContent = data.error || "Could not save confession.";
+                statusMessage.textContent = data.error || "Could not save thy confession.";
             }
         } catch (err) { //network horror
             if (statusMessage) {
