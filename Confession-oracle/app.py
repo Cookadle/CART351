@@ -89,8 +89,8 @@ def oracle():
     if not confessions:                                               
         return jsonify({"error": "No confessions yet"}), 404
     
-    chosen = random.choice(confessions)
-    chosen["times_given"] = chosen.get("times_given", 0) + 1
+    chosen = random.choice(confessions)#chose random confession
+    chosen["times_given"] = chosen.get("times_given", 0) + 1 #become echoes times 
 
     save_confessions(confessions)
 

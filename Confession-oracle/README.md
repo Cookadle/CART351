@@ -18,7 +18,7 @@ Tarot card game code - https://github.com/DevinReid/Tarot_Generate_Arcade (deck.
 Confession Wall - https://github.com/IdanHajbeko/Confession-Wall
 Tell me everything - https://github.com/ayushbasak/tell-me-everything
 Private Confession App - https://github.com/Mayukh-Mondal-Dev/Private-Confession-App/blob/main/app.py
-
+Confession - https://github.com/Rexaintreal/Confessions
 Ressources for this project i needed
 Hidden hesitation n keys tracking
 -https://github.com/DigitalHarborFoundation/keylog_ReactJS
