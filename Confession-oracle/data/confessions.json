@@ -1,2 +1,16 @@
-
-[]
+[
+  {
+    "id": 1,
+    "text": " I think we are all a bit silly ",
+    "timestamp": "2026-11-16T10:27:14",
+    "times_given": 0,
+    "ratings": []
+  },
+  {
+    "id": 2,
+    "text": "Sometimes I look at man bum when they have their pants sagged.",
+    "timestamp": "2026-11-15T17:54:46",
+    "times_given": 0,
+    "ratings": []
+  }
+]
