@@ -38,14 +38,14 @@
     "id": 6,
     "text": "hoooooooooooooo i wrote this at 5 35 on monday morning 16th",
     "timestamp": "2026-11-16T05:34:25.343324",
-    "times_given": 0,
+    "times_given": 1,
     "ratings": []
   },
   {
     "id": 7,
     "text": "oook lets go",
     "timestamp": "2026-11-16T05:38:33.560479",
-    "times_given": 0,
+    "times_given": 1,
     "ratings": []
   },
   {
@@ -80,7 +80,7 @@
     "id": 12,
     "text": "I have a favourite tree I visit every month",
     "timestamp": "2026-11-16T13:50:32.528926",
-    "times_given": 0,
+    "times_given": 1,
     "ratings": []
   },
   {
@@ -136,7 +136,7 @@
     "id": 20,
     "text": "I burn my finger tip while killing a candle.",
     "timestamp": "2026-11-16T14:25:56.636865",
-    "times_given": 0,
+    "times_given": 1,
     "ratings": []
   },
   {
@@ -150,14 +150,14 @@
     "id": 22,
     "text": "I wanted to be a vet as a kid",
     "timestamp": "2026-11-16T14:27:11.924335",
-    "times_given": 1,
+    "times_given": 2,
     "ratings": []
   },
   {
     "id": 23,
     "text": "I feel like pooping",
     "timestamp": "2026-11-16T14:27:26.278181",
-    "times_given": 0,
+    "times_given": 1,
     "ratings": []
   },
   {
@@ -214,6 +214,13 @@
     "text": "I kinda wanna pee not gonna lie",
     "timestamp": "2026-11-16T15:04:13.738213",
     "times_given": 1,
+    "ratings": []
+  },
+  {
+    "id": 32,
+    "text": "Love",
+    "timestamp": "2026-11-16T15:29:01.950443",
+    "times_given": 0,
     "ratings": []
   }
 ]

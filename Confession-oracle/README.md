@@ -11,6 +11,12 @@ Inspired by the rumour where Skyla shared a story on how chatgpt was reading tea
 
 Also inspired by my previous project to do list where the data of the user and the experience is didacted by the user info rather than the web.
 
+
+
+TO ADD
+Adding aN experience(more interactive and less straight foward) where the user is force to give data ,also set up a mood and experience prior to giving a confession.We want to absolutely take before we give back.
+
+
 Any AI usage will be cited and added  here and their purpose.Others sources as well.
 Docstrings - https://www.geeksforgeeks.org/python/python-docstrings/
 Tarot game on steam - https://store.steampowered.com/app/3582900/Mama_Nyahs_House_of_Tarot/
